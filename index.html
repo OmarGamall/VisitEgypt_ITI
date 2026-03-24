@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Egypt - Modern Portal</title>
+    <style>
+      /* Basic reset to remove default spacing */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* Prevents the main page from scrolling */
+      }
+
+      /* 1. The Header Area (Top 15%) */
+      .header-container {
+        height: 15vh; /* 15% of viewport height */
+        width: 100%;
+        border-bottom: 2px solid #000;
+      }
+
+      /* 2. The Main Body (Flexbox for Sidebar + Content) */
+      .main-body {
+        display: flex;
+        height: 85vh; /* Remaining 85% of height */
+      }
+
+      /* 3. The Sidebar Menu (Left 20%) */
+      .sidebar {
+        width: 20%;
+        height: 100%;
+        border-right: 2px solid #000;
+      }
+
+      /* 4. The Main Content Area (Remaining 80%) */
+      .content-area {
+        width: 80%;
+        height: 100%;
+      }
+
+      /* Style for the iframes themselves */
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none; /* Removes the default iframe border */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-container">
+      <iframe src="header.html" name="header-frame"></iframe>
+    </div>
+
+    <div class="main-body">
+      <div class="sidebar">
+        <iframe src="menu.html" name="menu-frame"></iframe>
+      </div>
+
+      <div class="content-area">
+        <iframe src="home.html" name="content"></iframe>
+      </div>
+    </div>
+  </body>
+</html>
